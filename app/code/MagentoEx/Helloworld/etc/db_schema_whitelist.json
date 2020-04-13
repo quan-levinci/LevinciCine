@@ -1,0 +1,13 @@
+{
+    "customer_info": {
+        "column": {
+            "id": true,
+            "first_name": true,
+            "last_name": true,
+            "email": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

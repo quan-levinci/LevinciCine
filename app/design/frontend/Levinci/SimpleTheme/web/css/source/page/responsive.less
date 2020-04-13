@@ -1,0 +1,39 @@
+@tablet:768px;
+@mobile-max:767px;
+@tablet-max:1024px;
+@media all and (max-width: @tablet-max) {
+    #maincontent{
+        &.page-main{
+            padding-right: 30px;
+            padding-left: 30px;
+            padding-top: 50px;
+            padding-bottom: 50px
+        }
+    }
+    .login-container{
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .block{
+        &.block-customer-login{
+            .field{
+                &.note{
+                    max-width: 60%;
+                }
+            }
+            input{
+                max-width: 220px;
+            }
+        }
+        &.block-new-customer{
+            input{
+                max-width: 220px;
+            }
+            select{
+                max-width: 220px;
+            }
+        }
+    }
+}
+
+

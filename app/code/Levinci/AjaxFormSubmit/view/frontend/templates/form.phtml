@@ -1,0 +1,87 @@
+
+<form class="ajax" action="/ajaxformsubmit/index/form" method="post" style="z-index: 1;">
+    <p>First Name</p>
+    <input type="text" name="first_name" required="required"><br>
+    <p>Last Name</p>
+    <input type="text" name="last_name" required="required"><br>
+    <p>Email</p>
+    <input type="text" name="email" required="required" ><br>
+    <button type="submit">Submit</button>
+</form>
+
+<div id="popup" class="success" style="background-color: lightgrey;
+    height: 70px;
+    display: none;
+    text-align: center;
+    max-width: 70%;
+    z-index: 999;
+    position: fixed;right: 50%; width: 200px; top: 30%;">
+    <strong><span id="closeBtn" style="float: right;
+    font-size: 20px;">&times;</span></strong>
+    <div class="success-content"style="padding-top: 25px;">
+        <p>Submit Successfull!!</p>
+    </div>
+</div>
+
+<div id="popup" class="fail" style="background-color: lightgrey;
+    height: 70px;
+    text-align: center;
+    max-width: 70%;
+    z-index: 999;
+    display: none;
+    position: fixed;right: 50%; width: 200px; top: 30%;">
+    <strong><span id="closeBtn" style="float: right;
+    font-size: 20px;">&times;</span></strong>
+    <div class="success-content"style="padding-top: 25px;">
+        <p>Submit Fail!!</p>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+     require(["jquery"],function($){
+        $('form.ajax').on('submit',function(e) {
+        /* Act on the event */
+        var that = $(this),
+            url =that.attr('action'),
+            type = that.attr('method');
+            data = {};
+        that.find('[name]').each(function(index,value){
+            var that = $(this),
+                name = that.attr('name'),
+                value = that.val();
+            data[name] = value;
+        });
+
+        $.ajax({
+            url:url,
+            type:type,
+            data:data,
+        })
+        .fail(function(){
+            alert("erro");
+        })
+        .done(function(html){
+            console.log(html.sucess);
+            if(html.sucess){
+                $('div.success').show();
+            }else{
+                $('div.fail').show();
+            }
+        });
+        jQuery("form.ajax input[type='text']").each(function() {
+            this.value = '';
+        });
+
+        return false;
+        });
+     })
+        var popup = document.getElementById('popup');
+        var closeBtn = document.getElementById('closeBtn');
+        closeBtn.addEventListener('click', closeModal);
+
+        function closeModal(){
+            popup.style.display= 'none';
+        }
+
+</script>

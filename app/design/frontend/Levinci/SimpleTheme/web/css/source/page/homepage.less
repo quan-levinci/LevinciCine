@@ -1,0 +1,378 @@
+
+	.header{
+		&.content{
+			background-color: grey;
+		}
+	}
+
+
+
+
+.customer-account-login{
+    *{
+        font-family: 'Roboto','sans-serif';
+    }
+     .panel{
+        &.header{
+            display:none;
+            }
+    }
+
+    .header{
+        &.content{
+            box-shadow: 0px 5px 10px rgba(158,158,158,.16078431);
+            margin:0px;
+            max-width:100%;
+            text-align: center;
+        }
+    }
+
+     #search{
+        display:none;
+    }
+
+    .action{
+        &.showcart{
+            display:none;
+        }
+    }
+
+    .logo{
+        float: none;
+        display: inline-block;
+    }
+
+     .block{
+        &.block-search{
+            display:none;
+        }
+    }
+
+    img{
+        text-align: center;
+    }
+
+    #maincontent{
+        &.page-main{
+            background-color:#f8f5ef;
+            padding-left:150px;
+            padding-right:150px;
+            padding-top: 100px;
+            padding-bottom: 100px;
+            max-width:100%;
+        }
+    }
+    #newsletter{
+        display:none;
+    }
+    .action{
+        &.subscribe{
+            &.primary{
+                display:none;
+                padding:0px;
+            }
+        }
+    }
+    .control:before{
+        display: none;
+    }
+
+    .field{
+        &.newsletter{
+            display:none;
+        }
+    }
+    .sections{
+        &.nav-sections{
+            display:none;
+        }
+    }
+     .page-title-wrapper{
+        display:none;
+    }
+     .columns{
+        background-color:white;
+        border-radius:40px;
+
+    }
+    .login-container{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        justify-items: center;
+        padding-left:100px;
+        padding-right:100px;
+    }
+    #send2{
+        &.action{
+            &.login{
+                &.primary{
+                width:126px;
+                height:52px;
+                background-color: #d79a2b;
+                border-radius:47px;
+                float:left;
+                transition-duration: 0.4s;
+                border: none;
+            }
+            &:hover{
+                background-color: black;
+                }
+            }
+        }
+    }
+     .actions-toolbar{
+        .secondary{
+            a{
+            color:black;
+            transition-duration: 0.4s;
+            padding-top: 11px;
+            text-decoration: none;
+                &:hover{
+                    color: #d79a2b;
+                }
+            }
+        }
+    }
+    a{
+        &.action{
+            &.create{
+                &.primary{
+                    width:232px;
+                    height:52px;
+                    background-color: #d79a2b;
+                    border-radius:47px;
+                    float:left;
+                    padding-top:15px;
+                    transition-duration: 0.4s;
+                    border: none;
+                    }
+                &:hover{
+                background-color: black;
+                }
+            }
+        }
+    }
+    #email{
+        &.input-text{
+            &:focus{
+                outline: #d79a2b;
+            }
+        }
+    }
+
+    #pass{
+        &.input-text{
+            &:focus{
+                outline: #d79a2b;
+            }
+        }
+    }
+     input{
+        width: 397.44px;
+        height: 52px;
+        border-radius: 6px;
+        &:hover{
+            color:#d79a2b;
+        }
+        &:focus{
+            outline: #d79a2b;
+        }
+    }
+
+    select{
+        &#country{
+            &:focus{
+                outline: #d79a2b;
+            }
+        }
+    }
+
+    h2{
+        text-align: center;
+        font-size:45px;
+        grid-row-start:1;
+        grid-column-end:1;
+        grid-column-start:3;
+        padding-bottom:50px;
+        padding-top:50px;
+    }
+
+    .block-title{
+        color:#d79a2b;
+        border-bottom:none;
+        #block-customer-login-heading{
+            font-size:25px;
+        }
+        #block-new-customer-heading{
+            font-size:25px;
+        }
+    }
+
+    .block{
+        &.block-customer-login{
+            width:90%;
+            grid-row-start: 2;
+            input{
+                &:hover{
+                    border-color: #d79a2b;
+                }
+                &:focus{
+                    box-shadow: 0 0 3px 1px #d79a2b;
+                }
+            }
+            .field{
+                &.email{
+                    padding-top:40px;
+                }
+            }
+            .block-title{
+                border-bottom: none;
+            }
+        }
+
+
+        &.block-new-customer{
+            border-left: 2px solid lightgrey;
+            padding-left:40px;
+            width:90%;
+            grid-row-start:2;
+            grid-column-start:2;
+            input{
+                &:hover{
+                    border-color: #d79a2b;
+                }
+                &:focus{
+                    box-shadow: 0 0 3px 1px #d79a2b;
+                }
+            }
+            select{
+                 &:hover{
+                    border-color: #d79a2b;
+                }
+                &:focus{
+                    box-shadow: 0 0 3px 1px #d79a2b;
+                }
+            }
+            #country{
+                width: 397.44px;
+                height: 52px;
+                border-radius: 6px;
+            }
+            .block-title{
+                border-bottom: none;
+            }
+            .block-content{
+                .field{
+                    &.email{
+                        margin: 0px 0px 20px;
+                        padding-top:10px;
+                    }
+                    &.country{
+                        margin: 0px 0px 20px;
+
+                    }
+                }
+            }
+        }
+    }
+
+    @tablet:768px;
+    @mobile-max:600px;
+    @tablet-max:1024px;
+    @media all and (max-width: @tablet-max) {
+        #maincontent{
+            &.page-main{
+            padding-right: 30px;
+            padding-left: 30px;
+            padding-top: 50px;
+            padding-bottom: 50px
+            }
+        }
+        .login-container{
+        padding-right: 20px;
+        padding-left: 20px;
+        }
+        .block{
+            &.block-customer-login{
+                .field{
+                    &.note{
+                        max-width: 100%;
+                    }
+                }
+                input{
+                    max-width: 300px;
+                }
+            }
+            &.block-new-customer{
+                input{
+                    max-width: 300px;
+                }
+                select{
+                    max-width: 300px;
+                }
+            }
+         }
+    }
+    @media all and (max-width: @tablet) {
+        .block{
+            &.block-customer-login{
+                .field{
+                    &.note{
+                        max-width: 100%;
+                    }
+                }
+                input{
+                    max-width: 220px;
+                }
+            }
+            &.block-new-customer{
+                input{
+                    max-width: 220px;
+                }
+                select{
+                    max-width: 220px;
+                }
+            }
+         }
+    }
+
+    @media all and(max-width:@mobile-max) {
+        .block{
+            &.block-customer-login{
+                grid-column-start: 1;
+                grid-column-end: 3;
+                .action-toolbar{
+                    display: grid;
+                }
+                #send2{
+                    &.login{
+                        &.primary{
+                            float: none;
+                        }
+                    }
+                }
+            }
+            &.block-new-customer{
+                padding: 0px;
+                border-left: none;
+                grid-column-start: 1;
+                grid-row-start: 3;
+                grid-column-end: 3;
+                a{
+                    &.action{
+                        &.create{
+                            &.primary{
+                                max-width: 220px
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+}
